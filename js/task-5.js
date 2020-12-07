@@ -17,10 +17,9 @@
 // Ямайка - 120 кредитов
 
 
-// const countryDelivery;
+
 const inputCountryDelivery = prompt('Введите страну доставки');
 
-// const  inputCountryDeliveryNum = Number(inputCountryDelivery)
 let message;
 let price;
 let country;
@@ -32,13 +31,8 @@ if (inputCountryDelivery === null) {
 } else {
 const inputCountryDeliveryLowCase = inputCountryDelivery.toLocaleLowerCase();
 switch (inputCountryDeliveryLowCase) {
-
-    // case null:        
-    //     message = `Отменено Пользователем  :((((  `;
-    //     alert(message);
-    //     break;
-
-    case 'китай':
+    
+     case 'китай':
         country = 'Китай';
         price = 100;
         message = `Доставка в ${country} будет стоить ${price} кредитов`;
