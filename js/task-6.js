@@ -21,8 +21,8 @@ while (true) {
     }
 
     input = Number(input);
-
     const notANumber = Number.isNaN(input);
+    
     if (notANumber) {
 
         alert('Было введено не число, попробуйте еще раз');

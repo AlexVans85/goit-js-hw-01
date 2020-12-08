@@ -20,21 +20,64 @@ const pricePerDroid = 3000;
 let message;
 let totalPrice;
 let newTotal; 
+let inputAnswer;
 
-const inputAnswer = prompt('О, сколько дроидов ты хочешь купить, мой Белый Господин?');
-const inputAnswerNum = Number(inputAnswer);
 
-totalPrice = pricePerDroid * inputAnswerNum;
-console.log(totalPrice);
+inputAnswer=prompt('О, сколько дроидов ты хочешь купить, мой Белый Господин?')
+console.log(inputAnswer);
+totalPrice = pricePerDroid*inputAnswer
+console.log(totalPrice)
 
-if (inputAnswer === null){
-    message = 'Отменено пользователем!';
-    alert(message);
-} else if (totalPrice > credits) {
-    message = 'О, горе Повелитель - недостаточно средств на счету!';
-    alert(message);
-} else {
-    newTotal = credits - totalPrice;
-    message = `О, Властелин, ты купил ${inputAnswerNum} дроидов, на счету осталось ${newTotal} кредитов.`
-    alert(message);
+while(inputAnswer!==null){
+        if(isNaN(inputAnswer)){
+        alert('Введи число, не строку!!! ЧИСЛО!!!! ЦИФРЫ, А НЕ БУКВЫ!!!!');
+        inputAnswer=prompt('введи число');
+    } else {if (totalPrice > credits) {
+                message = 'О, горе Повелитель - недостаточно средств на счету!';
+                alert(message);
+                break;
+                }
+            else {
+                newTotal = credits - totalPrice;
+                message = `О, Властелин, ты купил ${inputAnswer} дроидов, на счету осталось ${newTotal} кредитов.`
+                alert(message);
+                break;
+                }
+ }
+   
+} 
+if (inputAnswer === null) {
+    alert('О, справедливейший, ты казнил только, что модальное окно')
 }
+
+
+
+
+
+
+
+// if (inputAnswer === null){
+//     message = 'Отменено пользователем!';
+//     alert(message);
+// } else if (totalPrice > credits) {
+
+//     message = 'О, горе Повелитель - недостаточно средств на счету!';
+//     alert(message);
+
+// } else {
+//     newTotal = credits - totalPrice;
+//     message = `О, Властелин, ты купил ${inputAnswerNum} дроидов, на счету осталось ${newTotal} кредитов.`
+//     alert(message);
+// }
+
+// if (notANumber) {
+
+//     alert('Было введено не число, попробуйте еще раз');
+//     inputAnswer = prompt('О, сколько дроидов ты хочешь купить, мой Белый Господин?');
+    
+// } else {
+
+    
+
+
+
